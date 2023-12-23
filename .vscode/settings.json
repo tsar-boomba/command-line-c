@@ -1,0 +1,8 @@
+{
+	"files.associations": {
+		".env.local": "env",
+		"string.h": "c",
+		"heapstring.h": "c",
+		"stdlib.h": "c"
+	}
+}
