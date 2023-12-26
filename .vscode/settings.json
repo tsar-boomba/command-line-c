@@ -3,6 +3,10 @@
 		".env.local": "env",
 		"string.h": "c",
 		"heapstring.h": "c",
-		"stdlib.h": "c"
+		"stdlib.h": "c",
+		"regex.h": "c",
+		"pthread.h": "c",
+		"vecstr.h": "c",
+		"errno.h": "c"
 	}
 }

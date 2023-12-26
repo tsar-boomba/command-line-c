@@ -1,18 +1,24 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
+#include "types.h"
 
 /**
  * @param argc Number of arguments (arg count)
  * @param argv An array of strings (arg value)
 */
-int main(int argc, char** argv) {
-	for (int i = 0; i < argc; i++) {
-		printf("%s\n", argv[i]);
+int main(int argc, char *argv[]) {
+	if (argc < 2) {
+		fputc('\n', stdout);
+		return 0;
 	}
 
-	char **error = NULL;
-	int thousand = strtol("1000", error, 10);
+	i32 n_flag = !strcmp("-n", argv[1]);
 
-	printf("\nHello World!\n");
+	for (i32 i = n_flag ? 2 : 1; i < argc; i++) {
+		printf(i == argc - 1 ? "%s" : "%s ", argv[i]);
+	}
+
+	if (!n_flag) {
+		fputc('\n', stdout);
+	}
 }
